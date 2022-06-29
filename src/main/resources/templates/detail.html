@@ -17,9 +17,10 @@
     제목: [[${detail.title}]]
     내용: [[${detail.text}]]
     조회수: [[${detail.hits}]]
-
-<button onclick="update()">수정</button>
+<div th:if="${session.se}">
+<button th:if="${session.se.getMemail().equals(detail.writer)}" onclick="update()">수정</button>
 <button onclick="del()">삭제</button>
+</div>
 
 </body>
 </html>
