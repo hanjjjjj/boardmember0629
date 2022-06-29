@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    function update(){
+        location.href="/update/"+[[${detail.id}]]
+    }
+    function del(){
+        location.href="/del/"+[[${detail.id}]]
+    }
+    </script>
+</head>
+<body>
+    작성자: [[${detail.writer}]]
+    제목: [[${detail.title}]]
+    내용: [[${detail.text}]]
+    조회수: [[${detail.hits}]]
+
+<button onclick="update()">수정</button>
+<button onclick="del()">삭제</button>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/update/" method="post">
+    글번호:<input type="text" name="id" th:value="${detail.id}" readonly><br>
+     작성자:<input type="text" name="writer" th:value="${detail.writer}" readonly><br>
+     제목:<input type="text" name="title" th:value="${detail.title}"><br>
+    내용:<input type="text" name="text" th:value="${detail.text}"><br>
+    조회수:<input type="text" name="hits" th:value="${detail.hits}" readonly><br>
+    <input type="submit" value="수정">
+</form>
+</body>
+</html>
