@@ -19,7 +19,7 @@
     조회수: [[${detail.hits}]]
 <div th:if="${session.se}">
 <button th:if="${session.se.getMemail().equals(detail.writer)}" onclick="update()">수정</button>
-<button onclick="del()">삭제</button>
+<button th:if="${session.se.getMemail().equals(detail.writer)}" onclick="del()">삭제</button>
 </div>
 
 </body>
